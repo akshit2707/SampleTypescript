@@ -75,7 +75,7 @@ const AddToList: React.FC<IProps> = ({ setPeople, people }) => {
         className="AddToList-input"
         name="comment"
         value={input.comment}
-        placeholder="comment"
+        placeholder="Comment"
       />
       <button onClick={handleClick} className="AddToList-btn">
         Add to List
