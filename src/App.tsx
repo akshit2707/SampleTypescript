@@ -2,6 +2,7 @@ import React  , {useState} from 'react';
 
 import List from './components/List';
 import './App.css';
+import AddToList from './components/AddToList';
 
 interface IState {
 
@@ -16,15 +17,22 @@ interface IState {
 
 function App() {
 
-  const [people,setPeople]  =  useState<IState["people"]>([])
+  const [people,setPeople]  =  useState<IState["people"]>([
+    {
+      name : "Aryan Khan" , 
+      age  : 25 , 
+      url : "https://images.news18.com/ibnlive/uploads/2021/10/aryan-khan-1-2.jpg",
+      comment : "NCB laal salaam"
+    }
+  ])
   
-  people.map(person =>
-    person.age)
+  
 
   return (
     <div className="App">
       <h1>People invited to my party</h1>
       <List people = {people}/>
+      <AddToList people = {people} setPeople = {setPeople}/>
     </div>
   );
 }
