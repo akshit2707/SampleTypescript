@@ -1,5 +1,15 @@
 import React, { useState } from 'react'
-import { IState as IProps } from "../App"
+
+
+interface Props {
+
+    people :{
+     name :string
+     age  : number 
+     url : string
+     comment?:string
+    }[]
+  }
 
 interface IProps {
     setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>
