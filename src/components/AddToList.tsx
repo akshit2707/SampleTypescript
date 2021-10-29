@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-
-interface Props {
-  people: {
-    name: string;
-    age: number;
-    url: string;
-    comment?: string;
-  }[];
-}
+import { IState as Props } from "../App";
 
 interface IProps {
   setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>;
